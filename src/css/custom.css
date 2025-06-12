@@ -1,0 +1,215 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+/* See: https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima */
+:root {
+    --ifm-color-primary: #0e1726;
+    --ifm-color-primary-dark: #0d1522;
+    --ifm-color-primary-darker: #0c1420;
+    --ifm-color-primary-darkest: #0a101b;
+    --ifm-color-primary-light: #0f192a;
+    --ifm-color-primary-lighter: #101a2c;
+    --ifm-color-primary-lightest: #121e31;
+    --ifm-background-color: #f2f2f2;
+}
+
+[data-theme='dark'] {
+    --ifm-color-primary: #e3e6e8;
+    --ifm-color-primary-dark: #cacfd3;
+    --ifm-color-primary-darker: #bdc4c9;
+    --ifm-color-primary-darkest: #97a3aa;
+    --ifm-color-primary-light: #fcfcfd;
+    --ifm-color-primary-lighter: #ffffff;
+    --ifm-color-primary-lightest: #ffffff;
+    --ifm-background-color: #090a0d;
+}
+
+:root {
+    --ifm-navbar-background-color: #e3e6e8f5;
+    --ifm-font-color-base: #0e1726;
+    --ifm-font-color-secondary: #2a364d;
+}
+
+[data-theme='dark'] {
+    --ifm-navbar-background-color: #323234f5;
+    --ifm-font-color-base: #e3e6e8;
+    --ifm-font-color-secondary: #bbbdbf;
+}
+
+:root {
+    --ifm-menu-color: var(--ifm-font-color-secondary);
+    --ifm-menu-color-active: var(--ifm-font-color-base);
+}
+
+html[data-theme='dark'] .diagram {
+    filter: invert(0.92) !important;
+}
+
+:root {
+    --ifm-font-family-base: "Atkinson Hyperlegible", sans-serif;
+    --ifm-heading-font-family: var(--ifm-font-family-base);
+    --ifm-font-size-base: 1.1rem;
+    --ifm-line-height-base: 1.6;
+}
+
+.markdown h1:first-child {
+    --ifm-h1-font-size: 2rem;
+    margin: 0.5em 0 0;
+}
+
+.markdown > h2 {
+    --ifm-h2-font-size: 1.2rem;
+    margin: 2em 0 0.67em;
+    padding-top: 1em;
+    border-top: 1px solid var(--ifm-color-emphasis-500);
+}
+
+.markdown > h3 {
+    --ifm-h3-font-size: 1.25rem;
+    margin: 1.5em 0 0;
+}
+
+.markdown > h3 + h4 {
+    margin-top: 0.5em;
+}
+
+.markdown > h4 {
+    --ifm-h4-font-size: 1.1rem;
+    margin: 1.5em 0 0;
+}
+
+.markdown > h4 + p {
+    margin-top: 0.5em;
+}
+
+.markdown > h5 {
+    --ifm-h5-font-size: 1rem;
+}
+
+.markdown > h5 + p {
+    margin-top: 0.3em;
+}
+
+.markdown > h6 {
+    --ifm-h6-font-size: 1rem;
+}
+
+.markdown > h6 + p {
+    margin-top: 0.3em;
+}
+
+.theme-doc-markdown {
+    max-width: 75ch;
+    font-size: 1rem;
+    margin: auto;
+}
+
+.theme-doc-markdown a, .footer a {
+    color: revert;
+    text-decoration: revert;
+}
+
+.table-of-contents {
+    text-align: left;
+}
+
+.pagination-nav,
+.theme-doc-breadcrumbs,
+.theme-doc-toc-mobile {
+    font-family: var(--ifm-font-family-base);
+    max-width: 75ch;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.theme-admonition {
+    font-size: 0.9rem;
+    padding: 1em;
+
+    p:first-child {
+        margin-top: 0;
+    }
+}
+
+figure > img {
+    display: block;
+    margin: auto;
+}
+
+figure > figcaption {
+    font-style: italic;
+}
+
+/* Sidebar */
+.theme-doc-sidebar-container {
+    * {
+        font-size: 0.99em;
+    }
+
+    .theme-doc-sidebar-item-category {
+        font-weight: 600;
+    }
+
+    .theme-doc-sidebar-item-category-level-1 {
+        padding-top: 0.3em;
+        margin-bottom: 0.3em;
+        border-top: var(--ifm-color-emphasis-500) solid 1px;
+    }
+
+    .theme-doc-sidebar-item-link-level-1 {
+        padding-top: 0.3em;
+        margin-bottom: 0.3em;
+        border-top: var(--ifm-color-emphasis-500) solid 1px;
+    }
+
+    .theme-doc-sidebar-item-link-level-1:first-child,
+    .theme-doc-sidebar-item-category-level-1:first-child {
+        border-top: none;
+    }
+
+    .theme-doc-sidebar-item-link * {
+        font-weight: normal;
+    }
+}
+
+@media print {
+    :root, body {
+        font-size: 16px;
+    }
+
+    .data-footnote-backref, .theme-back-to-top-button {
+        display: none;
+    }
+
+    p, ul, ol, .code-editor, .theme-admonition, .katex-display {
+        break-inside: avoid;
+    }
+
+    h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
+        break-before: avoid;
+    }
+
+    .code-editor *, pre * {
+        font-size: 0.85rem;
+    }
+
+    h2 {
+        padding-top: 0;
+        margin-top: 0;
+        border-top: unset !important;
+    }
+
+    @page {
+        size: A4;
+        margin: 0.75in 0.5in;
+    }
+}

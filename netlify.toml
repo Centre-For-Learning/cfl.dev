@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/java/*"
+  to = "https://cfljava.netlify.app/:splat"
+  status = 301
+  force = true
