@@ -53,7 +53,7 @@ const config = {
                     label: "Topics",
                     position: "left",
                     items: [
-                        {label: "OOP & Java", href: "https://cfl.dev/java"},
+                        {label: "OOP & Java", href: "/java"},
                     ],
                 },
             ],
