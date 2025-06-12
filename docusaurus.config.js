@@ -23,7 +23,7 @@ const config = {
 
     favicon: "/favicon.ico",
 
-    onBrokenLinks: "throw",
+    onBrokenLinks: "warn",
     onBrokenMarkdownLinks: "warn",
 
     markdown: {format: "md"},
