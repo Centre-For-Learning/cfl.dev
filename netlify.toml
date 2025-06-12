@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/java/*"
-  to = "https://centreforlearningjava.netlify.app/:splat"
+  to = "https://centreforlearningjava.netlify.app/java/:splat"
   status = 301
   force = true
