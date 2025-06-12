@@ -3,3 +3,7 @@
   to = "https://centreforlearningjava.netlify.app/java/:splat"
   status = 200
  
+[[redirects]]
+  from = "/java"
+  to = "https://centreforlearningjava.netlify.app/java"
+  status = 200
