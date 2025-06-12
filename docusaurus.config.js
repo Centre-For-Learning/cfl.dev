@@ -20,6 +20,7 @@ const config = {
     title: "CFL",
     url: "https://cfl.dev",
     baseUrl: "/",
+    trailingSlash: true,
 
     favicon: "/favicon.ico",
 
